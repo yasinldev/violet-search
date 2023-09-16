@@ -1,0 +1,30 @@
+/*
+    Assistant & Quicksand
+*/
+
+@font-face {
+    font-family: 'Assistant';
+    src: url("../fonts/assistant/Assistant-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url("../fonts/quicksand/Quicksand_Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "NatoSans";
+    src: url("../fonts/nato_sans/NotoSans-Light.ttf") format("truetype");
+}
+
+.font-assistant {
+    font-family: 'Assistant', sans-serif;
+}
+
+.font-quicksand {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.font-nato-sans {
+    font-family: "NatoSans", sans-serif;
+}
