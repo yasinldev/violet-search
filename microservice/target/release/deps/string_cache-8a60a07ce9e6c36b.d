@@ -1,0 +1,11 @@
+D:\violet-search\microservice\target\release\deps\string_cache-8a60a07ce9e6c36b.rmeta: C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\string_cache-0.8.7\src\lib.rs C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\string_cache-0.8.7\src\atom.rs C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\string_cache-0.8.7\src\dynamic_set.rs C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\string_cache-0.8.7\src\static_sets.rs C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\string_cache-0.8.7\src\trivial_impls.rs
+
+D:\violet-search\microservice\target\release\deps\libstring_cache-8a60a07ce9e6c36b.rlib: C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\string_cache-0.8.7\src\lib.rs C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\string_cache-0.8.7\src\atom.rs C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\string_cache-0.8.7\src\dynamic_set.rs C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\string_cache-0.8.7\src\static_sets.rs C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\string_cache-0.8.7\src\trivial_impls.rs
+
+D:\violet-search\microservice\target\release\deps\string_cache-8a60a07ce9e6c36b.d: C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\string_cache-0.8.7\src\lib.rs C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\string_cache-0.8.7\src\atom.rs C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\string_cache-0.8.7\src\dynamic_set.rs C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\string_cache-0.8.7\src\static_sets.rs C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\string_cache-0.8.7\src\trivial_impls.rs
+
+C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\string_cache-0.8.7\src\lib.rs:
+C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\string_cache-0.8.7\src\atom.rs:
+C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\string_cache-0.8.7\src\dynamic_set.rs:
+C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\string_cache-0.8.7\src\static_sets.rs:
+C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\string_cache-0.8.7\src\trivial_impls.rs:

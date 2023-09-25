@@ -1,0 +1,11 @@
+D:\violet-search\microservice\target\release\deps\ppv_lite86-c682ca1d7d315b38.rmeta: C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ppv-lite86-0.2.17\src\lib.rs C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ppv-lite86-0.2.17\src\soft.rs C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ppv-lite86-0.2.17\src\types.rs C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ppv-lite86-0.2.17\src\x86_64\mod.rs C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ppv-lite86-0.2.17\src\x86_64\sse2.rs
+
+D:\violet-search\microservice\target\release\deps\libppv_lite86-c682ca1d7d315b38.rlib: C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ppv-lite86-0.2.17\src\lib.rs C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ppv-lite86-0.2.17\src\soft.rs C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ppv-lite86-0.2.17\src\types.rs C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ppv-lite86-0.2.17\src\x86_64\mod.rs C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ppv-lite86-0.2.17\src\x86_64\sse2.rs
+
+D:\violet-search\microservice\target\release\deps\ppv_lite86-c682ca1d7d315b38.d: C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ppv-lite86-0.2.17\src\lib.rs C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ppv-lite86-0.2.17\src\soft.rs C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ppv-lite86-0.2.17\src\types.rs C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ppv-lite86-0.2.17\src\x86_64\mod.rs C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ppv-lite86-0.2.17\src\x86_64\sse2.rs
+
+C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ppv-lite86-0.2.17\src\lib.rs:
+C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ppv-lite86-0.2.17\src\soft.rs:
+C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ppv-lite86-0.2.17\src\types.rs:
+C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ppv-lite86-0.2.17\src\x86_64\mod.rs:
+C:\Users\ozkay\.cargo\registry\src\index.crates.io-6f17d22bba15001f\ppv-lite86-0.2.17\src\x86_64\sse2.rs:

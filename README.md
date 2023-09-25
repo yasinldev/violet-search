@@ -29,9 +29,9 @@ Because we believe that privacy is a fundamental human right that should be prot
 
 ## Process
 
-Violet is having two main components: the search engine and the scraper. The search engine is written in PHP and uses the Laravel framework. The scraper is written in Rust. Here is a diagram of how the two components interact with each other (simple version): <br><br>
+Violet is having two main components: the search engine and the microservice. The search engine is written in PHP and uses the Laravel framework. The microservice is written in Rust. Here is a diagram of how the two components interact with each other (simple version): <br><br>
 <img src="resources/image/violet_d.png"><br><br>
-The scraper is responsible for crawling the web and indexing the pages. The search engine is responsible for serving the search results to the user.
+The microservice is responsible for crawling the web and indexing the pages. The search engine is responsible for serving the search results to the user.
 
 ## FAQ (Frequently Asked Questions)
 
@@ -76,7 +76,8 @@ There are several reasons why you might consider using Violet Search instead of 
 If you would like to add support for another language, please open an issue on GitHub.
 <br><br>
 Or you can add it yourself by editing the `resources/lang` directory.
-
+<br>
+You can find more information about how to do this in the [Violet Language Documantation](LANGUAGE.md).
 ### Search Engines
 
 - Google
@@ -91,7 +92,7 @@ Or you can add it yourself by editing the `resources/lang` directory.
 - Brave
 - Violet Results (In Development)
 
-## Setup and Setting Up Scraper
+## Setup and Setting Up Microservice
 
 ### Requirements
 
@@ -137,38 +138,21 @@ php artisan key:generate
 php artisan serve
 ```
 
-### Setting Up Scraper
+### Setting Up Microservice
 
-1. Add a <b>SEARCH_ENGINE_KEY</b> to your ``.env`` file example:
-
-```bash
-SEARCH_ENGINE_KEY=this_is_a_secret_key
-```
-
-2. Enter the scraper directory
+2. Enter the microservice directory
 
 ```bash
-cd scraper
+cd microservice
 ```
 
-3. Build the scraper
+3. Build the microservice
 
 ```bash
 cargo build --release
 ```
 
-4. Copy the `.env.example` file to `.env` and enter your <b>SEARCH_ENGINE_KEY</b> and credentials example:
-
-```bash
-cp .env.example .env
-```
-then edit the file
-
-```bash
-SEARCH_ENGINE_KEY=this_is_a_secret_key
-```
-
-5. Run the scraper
+4. Run the microservice
 
 ```bash
 cargo run --release
@@ -176,7 +160,9 @@ cargo run --release
 
 ## Contributing
 
-We welcome contributions from everyone. Feel free to open an issue or submit a pull request.
+Contributions are always welcome! If you have any suggestions or would like to contribute to the project, please open an issue on GitHub. You can also fork the repository and submit a pull request.
+
+Please read the [CONTRIBUTING.md](CONTRIBUTE.md) file for more information.
 
 ## License
 

@@ -15,7 +15,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     </head>
     <body>
-       <div class="violet-container is-fluid">
+        <div id="styled_editor"></div>
+        <div class="violet-container is-fluid">
             <div class="violet-row">
                 <div class="column-na-12 justify-between">
                     <div class="search-page">
@@ -34,6 +35,7 @@
                     <x-sidebar />
                 </div>
             </div>
+            <x-modals.themes-and-option />
             <div class="search-types">
                 <div class="search-buttons suspend-text font-assistant active">
                     <i class="bi bi-search"></i> &nbsp; All
@@ -91,10 +93,22 @@
                    user_agent: "{{ $_SERVER['HTTP_USER_AGENT'] }}",
                    query_web: param
                }));
+
+               console.log('Connection established');
+               console.log(`Sending data to the server: ${param}`);
            };
 
            socket.onmessage = function (event) {
+               console.log(`Data received from server: ${event.data}`);
                wikipedia.innerHTML = JSON.parse(event.data);
+           }
+
+           socket.onclose = function (event) {
+               if (event.wasClean) {
+                   console.log(`[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
+               } else {
+                   console.log('[close] Connection died');
+               }
            }
        </script>
        <script src="{{ asset('js/components.js') }}"></script>

@@ -1,0 +1,3 @@
+cargo:rerun-if-changed=build/main.rs
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=D:\violet-search\microservice\target\release\build\typenum-8ca1bdafca9b45d0\out\consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=D:\violet-search\microservice\target\release\build\typenum-8ca1bdafca9b45d0\out\op.rs

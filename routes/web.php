@@ -18,4 +18,3 @@ Route::get('/', function () {
 });
 
 Route::get('/search', 'App\Http\Controllers\SearchController@index')->name('search');
-Route::get('/settings', 'App\Http\Controllers\SettingsController@index')->name('settings');

@@ -1,4 +1,5 @@
 <!doctype html>
+<?php session_start(); ?>
 <html lang="{{ str_replace('_', '_', app()->getLocale()) }}">
     <head>
         <meta charset="UTF-8">
@@ -14,7 +15,8 @@
         <!-- Bootstrap Icons -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     </head>
-    <body>
+    <body id="index-body">
+    <div id="styled_editor"></div>
     <div class="violet-container is-fluid">
         <div class="violet-row">
             <div class="column-na-12">
@@ -29,6 +31,7 @@
                 </div>
             </div>
         </div>
+        <x-modals.themes-and-option />
         <form action="{{ route('search') }}" method="get">
             <div class="violet-row">
                 <div class="column-na-12 justify-center items-center">
@@ -49,7 +52,7 @@
                                 search_engine: "{{ $_ENV['DEFAULT_SEARCH_ENGINE'] }}",
                                 search_type: "dropdown",
                                 user_agent: "{{ $_SERVER['HTTP_USER_AGENT'] }}",
-                                query: ""
+                                query: null,
                             }));
                         };
 
@@ -65,10 +68,9 @@
                                     user_agent: "{{ $_SERVER['HTTP_USER_AGENT'] }}",
                                     query: inputValue,
                                 }))
-                                removable.classList.add('d-none');
 
                             } else if (inputValue.length < 3) {
-                                removable.classList.remove('d-none');
+
                             }
                         });
 
@@ -89,6 +91,14 @@
 
                             });
                         };
+
+                        socket.onclose = function (event) {
+                            if (event.wasClean) {
+                                console.log(`[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
+                            } else {
+                                console.log('[close] Connection died');
+                            }
+                        }
                     </script>
                     <x-Input-dropdown />
                 </div>
