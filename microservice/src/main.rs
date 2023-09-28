@@ -11,7 +11,6 @@ use crate::exceptions::exceptions::{throw_violet_search_exception, VioletSearchE
 pub mod helpers;
 pub mod exceptions;
 pub mod engines;
-pub mod api;
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct JsonData {
@@ -103,7 +102,7 @@ async fn handle_connection(stream: TokioTcpStream) {
                                 .unwrap();
                         }
                         "web" => {
-                            println!("this is a web search");
+                            println!("Web search");
                         }
                         _ => throw_violet_search_exception(
                             VioletSearchExceptions::VioletSearchInvalidParameterException(
