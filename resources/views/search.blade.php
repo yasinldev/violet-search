@@ -11,6 +11,9 @@
         <link rel="icon" href="{{ asset('image/violet.png') }}">
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
+        <!-- Wiki API -->
+        <script src="{{ asset('js/wikipedia.js') }}"></script>
+
         <!-- Bootstrap Icons -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     </head>
@@ -24,7 +27,7 @@
                             <div id="sidebar" class="login-button suspend-text font-assistant">Settings</div>
                         </div>
                         <form method="get">
-                            <div class="input-group">
+                            <div class="input-group" style="border-radius: 6px;">
                                 <img src="{{ asset('image/violet.png') }}" alt="violet-search" />
                                 <input id="search-bar" name="q" type="text" value="{{ $_GET['q'] }}" placeholder="What are you looking for?">
                             </div>
@@ -55,7 +58,7 @@
             </div>
            <div class="results">
                <div class="violet-row">
-                   <div class="column-sm-12 column-xs-12 column-md-7 column-lg-7">
+                   <div class="column-sm-12 column-xs-12 column-md-8 column-lg-8 column-xl-8">
                        <div class="result-item">
                             <div class="result-refs">
                                 <div class="result-badge">
@@ -74,33 +77,30 @@
                            </small>
                        </div>
                    </div>
-                   <div class="column-sm-12 column-xs-12 column-md-5 column-lg-5">
-                       <div id="#wiki-card"></div>
+                   <div class="column-sm-12 column-xs-12 column-md-4 column-lg-4">
+                       <div id="wikipedia_data"></div>
+                       <div id="wiki_titles"></div>
                    </div>
                </div>
            </div>
        </div>
        <script>
            const socket = new WebSocket('ws://127.0.0.1:3000');
-           const wikipedia = document.getElementById('wiki-card');
+           const param = "{{ $_GET['q'] }}";
 
-           socket.onopen = function() {
-               const param = "{{ $_GET['q'] }}";
+           socket.onopen = function () {
                socket.send(JSON.stringify({
                    lang: "{{ $_ENV['DEFAULT_LOCALE'] }}",
                    search_engine: "{{ $_ENV['DEFAULT_SEARCH_ENGINE'] }}",
                    search_type: "web",
                    user_agent: "{{ $_SERVER['HTTP_USER_AGENT'] }}",
-                   query_web: param
+                   query: param,
                }));
-
-               console.log('Connection established');
-               console.log(`Sending data to the server: ${param}`);
            };
 
            socket.onmessage = function (event) {
                console.log(`Data received from server: ${event.data}`);
-               wikipedia.innerHTML = JSON.parse(event.data);
+               const data = JSON.parse(event.data);
            }
 
            socket.onclose = function (event) {
@@ -110,6 +110,9 @@
                    console.log('[close] Connection died');
                }
            }
+
+           get_wikipedia_titles(param, "{{ $_ENV['DEFAULT_LOCALE'] }}", "wiki_titles");
+           get_wikipedia_data(param, "{{ $_ENV['DEFAULT_LOCALE'] }}", "wikipedia_data");
        </script>
        <script src="{{ asset('js/components.js') }}"></script>
     </body>

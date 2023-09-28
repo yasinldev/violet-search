@@ -494,6 +494,71 @@
     border-bottom: 2px solid #66a5ce;
 }
 
+.wiki-titles {
+    padding: 10px;
+    border-left: 2px solid #efefef;
+    padding-left: 15px;
+    transition: 0.1s;
+}
+
+.wiki-titles:hover {
+    border-left: 2px solid #d9d9ff;
+    transition: 0.1s;
+}
+
+.wiki-titles-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.wiki-titles a {
+    border-radius: 3px;
+    display: flex;
+    cursor: pointer;
+    text-decoration: none;
+    color: #4a4a4a;
+    transition: 0.1s;
+    text-decoration: none;
+}
+
+.wiki-titles a:first-child {
+    padding-top: 0;
+}
+
+.wiki-titles a:last-child {
+    padding-bottom: 0 !important;
+}
+
+.wiki-titles a:hover {
+    color: #6b6bdb;
+}
+
+.wikipedia-card {
+    border-left: 2px solid #efefef;
+    padding: 10px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    transition: 0.1s;
+}
+
+.wikipedia-card:hover {
+    border-left: 2px solid #d9d9ff;
+    transition: 0.1s;
+}
+
+.wikipedia-card img {
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.wikipedia-card .subtitle {
+    font-size: large;
+    color: #5c5c5c;
+    margin-bottom: 10px;
+}
 
 /*
     Settings Page
