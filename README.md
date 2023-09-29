@@ -33,6 +33,14 @@ Violet is having two main components: the search engine and the microservice. Th
 <img src="resources/image/violet_d.png"><br><br>
 The microservice is responsible for crawling the web and indexing the pages. The search engine is responsible for serving the search results to the user.
 
+## IP Rotation
+
+Violet uses a proxy server to rotate the IP address of the microservice. This means that the microservice will have a different IP address each time it crawls a website. This helps prevent websites from blocking the microservice.
+
+<img src="resources/image/violet_ip.png"><br><br>
+
+> Note: This feature is not default enabled. You can enable it in the `.env` file.
+
 ## FAQ (Frequently Asked Questions)
 
 ### What is Violet?
