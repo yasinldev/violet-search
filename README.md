@@ -35,7 +35,7 @@ The microservice is responsible for crawling the web and indexing the pages. The
 
 ## IP Rotation
 
-Violet uses a proxy server to rotate the IP address of the microservice. This means that the microservice will have a different IP address each time it crawls a website. This helps prevent websites from blocking the microservice.
+Violet uses a proxy server to rotate the IP address of the microservice. This means that the microservice will have a different IP address each time it crawls a website. This helps prevent websites from blocking the microservice
 
 <img src="resources/image/violet_ip.png"><br><br>
 
