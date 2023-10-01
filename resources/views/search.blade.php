@@ -55,6 +55,9 @@
                 <div class="search-buttons suspend-text font-assistant">
                     <i class="bi bi-newspaper"></i> &nbsp; News
                 </div>
+                <div class="search-buttons suspend-text font-assistant" style="color: #9f9fff; cursor: unset;">
+                    <i class="bi bi-bounding-box-circles"></i> &nbsp; Results from {{ $_ENV['DEFAULT_SEARCH_ENGINE'] }}
+                </div>
             </div>
            <div class="results">
                <div class="violet-row">
@@ -95,6 +98,7 @@
                    search_type: "web",
                    user_agent: "{{ $_SERVER['HTTP_USER_AGENT'] }}",
                    query: param,
+                   use_proxy: "{{ $_ENV['USE_VIOLET_PROXY'] }}",
                }));
            };
 

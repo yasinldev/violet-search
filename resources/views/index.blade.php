@@ -43,6 +43,7 @@
                         // Creating a websocket
                         const socket = new WebSocket('ws://127.0.0.1:3000');
                         const search_bar = document.getElementById('search-bar');
+                        const search_engine = "{{ $_ENV['DEFAULT_SEARCH_ENGINE'] }}";
 
                         // When the connection is open, send some data to the server
                         socket.onopen = function () {
@@ -53,6 +54,7 @@
                                 search_type: "dropdown",
                                 user_agent: "{{ $_SERVER['HTTP_USER_AGENT'] }}",
                                 query: null,
+                                use_proxy: "{{ $_ENV['USE_VIOLET_PROXY'] }}",
                             }));
                         };
 
@@ -67,9 +69,8 @@
                                     search_type: "dropdown",
                                     user_agent: "{{ $_SERVER['HTTP_USER_AGENT'] }}",
                                     query: inputValue,
+                                    use_proxy: "{{ $_ENV['USE_VIOLET_PROXY'] }}",
                                 }))
-
-                            } else if (inputValue.length < 3) {
 
                             }
                         });
@@ -80,16 +81,18 @@
                             const dropdown = document.getElementById('suggestion');
                             dropdown.innerHTML = '';
 
-                            data.forEach(option => {
-                                const optionElement = document.createElement('a');
-                                optionElement.href = "localhost:8000/search?q=" + option.phrase;
-                                optionElement.className = "dropdown-item";
-                                optionElement.value = option.phrase;
-                                optionElement.textContent = option.phrase;
-
-                                dropdown.appendChild(optionElement);
-
-                            });
+                            if (search_engine === "google") {
+                                scrap_google_suggestions(data)
+                            }
+                            else if (search_engine === "duckduckgo") {
+                                scrap_ddg_suggestions(data)
+                            }
+                            else if (search_engine === "artado") {
+                                scrap_artado_suggestions(data)
+                            }
+                            else {
+                                console.log("no one ")
+                            }
                         };
 
                         socket.onclose = function (event) {
@@ -105,6 +108,7 @@
             </div>
         </form>
     </div>
+    <script src="{{ asset('js/parser/dropdowns.js') }}"></script>
     <script src="{{ asset('js/components.js') }}"></script>
     </body>
 </html>
