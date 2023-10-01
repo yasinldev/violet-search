@@ -6,6 +6,7 @@ use futures_util::SinkExt;
 use tokio_tungstenite::{accept_async, tungstenite};
 use futures_util::stream::StreamExt;
 use crate::engines::dropdowns::dropdowns::Dropdowns;
+use crate::engines::client::client::Client;
 use crate::exceptions::exceptions::{throw_violet_search_exception, VioletSearchExceptions};
 
 pub mod helpers;
@@ -18,17 +19,19 @@ pub struct JsonData {
     pub search_engine: String,
     pub search_type: String,
     pub user_agent: String,
-    pub query: String
+    pub query: String,
+    pub use_proxy: String,
 }
 
 impl JsonData {
-    pub fn new(lang: String, search_engine: String, search_type: String, user_agent: String, query: String) -> Self {
+    pub fn new(lang: String, search_engine: String, search_type: String, user_agent: String, query: String, use_proxy: String) -> Self {
         Self {
             lang,
             search_engine,
             search_type,
             user_agent,
-            query
+            query,
+            use_proxy
         }
     }
 
@@ -39,6 +42,7 @@ impl JsonData {
             "search_type" => self.search_type.clone(),
             "user_agent" => self.user_agent.clone(),
             "query" => self.user_agent.clone(),
+            "use_proxy" => self.use_proxy.clone(),
             _ => panic!("Error: JsonData param not found"),
         }
     }
@@ -102,7 +106,20 @@ async fn handle_connection(stream: TokioTcpStream) {
                                 .unwrap();
                         }
                         "web" => {
-                            println!("Web search");
+                            if &call_json.use_proxy == "true" {
+                                println!(
+                                    "{}",
+                                    "INFO:    Violet Search is using a proxy".bright_blue()
+                                );
+                                
+                                // creating a client
+                                let res = Client::connect_violet_proxy(
+                                    call_json.user_agent.clone(),
+                                    "127.0.0.1".to_string(),
+                                    "8080".to_string()
+                                ).await;
+                                println!("{}", res);
+                            }
                         }
                         _ => throw_violet_search_exception(
                             VioletSearchExceptions::VioletSearchInvalidParameterException(
