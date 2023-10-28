@@ -549,15 +549,25 @@
     transition: 0.1s;
 }
 
-.wikipedia-card img {
-    height: 200px;
-    margin-bottom: 10px;
-}
-
 .wikipedia-card .subtitle {
     font-size: large;
     color: #5c5c5c;
+    line-height: 25px;
     margin-bottom: 10px;
+}
+
+.wikipedia-card .suspend-text {
+    line-height: 20px;
+}
+
+.alert-warning {
+    background-color: #ffe6b3;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    line-height: 20px;
+    color: #5c5c5c
 }
 
 /*

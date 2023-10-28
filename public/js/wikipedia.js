@@ -15,13 +15,7 @@ function get_wikipedia_titles(title, language, targetElementId) {
         })
         .then(data => {
             wikipedia_titles.classList.add('wiki-titles');
-            const h3 = document.createElement('h3');
-            h3.innerHTML = 'Other Wikipedia titles';
-            h3.classList.add('wiki-titles-header');
-            h3.classList.add('font-assistant');
-            wikipedia_titles.appendChild(h3);
 
-            wikipedia_titles.appendChild(document.createElement('br'));
             for (let i = 1; i < data[1].length; i++) {
                 const title = data[1][i];
                 const href = data[3][i];
@@ -29,7 +23,8 @@ function get_wikipedia_titles(title, language, targetElementId) {
                 div.innerHTML = title;
                 div.href = href;
                 wikipedia_titles.appendChild(div);
-                wikipedia_titles.appendChild(document.createElement('br'));
+                if(i < data[1].length - 1)
+                    wikipedia_titles.appendChild(document.createElement('br'));
             }
         })
         .catch(error => {
@@ -40,34 +35,8 @@ function get_wikipedia_titles(title, language, targetElementId) {
 
 function get_wikipedia_data(title, language, targetElementId) {
     const wikipedia_data = document.getElementById(targetElementId);
-    const wikipedia_card = document.getElementById('wikipedia-card');
 
-    const url = `https://${language}.wikipedia.org/w/api.php?origin=*&action=query&prop=extracts&exintro&explaintext&format=json&titles=${title}&imageinfo&iiprop=url`;
-    const image_url = `https://${language}.wikipedia.org/w/api.php?origin=*&action=query&prop=pageimages&format=json&piprop=original&titles=${title}`;
-
-    fetch(image_url, {
-        method: 'GET',
-        mode: 'cors',
-    })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            const page = data.query.pages;
-            const page_id = Object.keys(page)[0];
-            const image_url = page[page_id].original.source;
-            const img = document.createElement('img');
-            img.src = image_url;
-            img.classList.add('wikipedia-image');
-            wikipedia_data.appendChild(img);
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        }
-    );
+    const url = `https://${language}.wikipedia.org/w/api.php?origin=*&action=query&list=search&srsearch=${title}&utf8=&format=json&prop=extracts&exintro&explaintext&titles=${title}&imageinfo&iiprop=url`;
 
     fetch(url, {
         method: 'GET',
@@ -81,7 +50,6 @@ function get_wikipedia_data(title, language, targetElementId) {
         })
         .then(data => {
             wikipedia_data.classList.add('wikipedia-card');
-            wikipedia_data.appendChild(document.createElement('br'));
 
             const page = data.query.pages;
             const page_id = Object.keys(page)[0];
@@ -89,14 +57,12 @@ function get_wikipedia_data(title, language, targetElementId) {
 
             let page_subtitle = "";
 
-// Remove text within parentheses and trim the result
             extract = extract.replace(/\([^)]*\)/g, '').trim();
 
             if (extract.length > 500) {
                 extract = extract.substring(0, 500) + '...';
             }
 
-// Find the first period (.) to determine the subtitle
             const firstPeriodIndex = extract.indexOf('.');
             if (firstPeriodIndex !== -1) {
                 page_subtitle = extract.substring(0, firstPeriodIndex + 1);

@@ -1,0 +1,5 @@
+/Users/ozkay/Desktop/violet-search/microservice/target/debug/build/selectors-949172cc5314b293/build_script_build-949172cc5314b293: /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/selectors-0.25.0/build.rs
+
+/Users/ozkay/Desktop/violet-search/microservice/target/debug/build/selectors-949172cc5314b293/build_script_build-949172cc5314b293.d: /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/selectors-0.25.0/build.rs
+
+/Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/selectors-0.25.0/build.rs:

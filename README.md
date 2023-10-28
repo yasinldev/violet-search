@@ -38,8 +38,7 @@ The microservice is responsible for crawling the web and indexing the pages. The
 Violet uses a proxy server to rotate the IP address of the microservice. This means that the microservice will have a different IP address each time it crawls a website. This helps prevent websites from blocking the microservice
 
 <img src="resources/image/violet_ip.png"><br><br>
-
-> Note: This feature is not default enabled. You can enable it in the `.env` file.
+> Note: This feature is in development and not default enabled. You can enable it in the `.env` file.
 
 ## FAQ (Frequently Asked Questions)
 

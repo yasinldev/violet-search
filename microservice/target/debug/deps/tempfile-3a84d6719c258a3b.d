@@ -1,0 +1,12 @@
+/Users/ozkay/Desktop/violet-search/microservice/target/debug/deps/tempfile-3a84d6719c258a3b.rmeta: /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tempfile-3.8.0/src/lib.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tempfile-3.8.0/src/dir.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tempfile-3.8.0/src/error.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tempfile-3.8.0/src/file/mod.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tempfile-3.8.0/src/file/imp/mod.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tempfile-3.8.0/src/spooled.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tempfile-3.8.0/src/util.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tempfile-3.8.0/src/file/imp/unix.rs
+
+/Users/ozkay/Desktop/violet-search/microservice/target/debug/deps/tempfile-3a84d6719c258a3b.d: /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tempfile-3.8.0/src/lib.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tempfile-3.8.0/src/dir.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tempfile-3.8.0/src/error.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tempfile-3.8.0/src/file/mod.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tempfile-3.8.0/src/file/imp/mod.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tempfile-3.8.0/src/spooled.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tempfile-3.8.0/src/util.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tempfile-3.8.0/src/file/imp/unix.rs
+
+/Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tempfile-3.8.0/src/lib.rs:
+/Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tempfile-3.8.0/src/dir.rs:
+/Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tempfile-3.8.0/src/error.rs:
+/Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tempfile-3.8.0/src/file/mod.rs:
+/Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tempfile-3.8.0/src/file/imp/mod.rs:
+/Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tempfile-3.8.0/src/spooled.rs:
+/Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tempfile-3.8.0/src/util.rs:
+/Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tempfile-3.8.0/src/file/imp/unix.rs:

@@ -1,10 +1,7 @@
 /*
     Scrapping dropdowns
 */
-
-use reqwest;
 use serde_json;
-use xml::reader::XmlEvent;  // for google
 
 use crate::engines::client::client::Client;
 use crate::exceptions::exceptions::throw_violet_search_exception;
@@ -36,7 +33,6 @@ impl Dropdowns {
         // Checking engine
         let engine = match self.engine.as_str() {
             "artado" => format!("https://www.artadosearch.com/api/autocomplete?q={}", self.query),
-            "google" => format!("https://suggestqueries.google.com/complete/search?output=toolbar&hl={}&q={}", self.lang, self.query),
             "duckduckgo" => format!("https://duckduckgo.com/ac/?q={}&kl={}", self.query, self.lang),
             "qwant" => format!("https://api.qwant.com/api/suggest/?q={}&client=opensearch&lang={}", self.query, self.lang),
             "yahoo" => format!("https://search.yahoo.com/sugg/gossip/gossip-us-ura/?output=sd1&command={}", self.query),
@@ -48,29 +44,8 @@ impl Dropdowns {
                 VioletSearchUndefinedException("Error:    Engine not found".to_string())
             )
         };
-
+        // creating a client
         let res = Client::create_client(self.user_agent.clone(), engine).await;
-        /*if engine == "google".to_string() {
-            let mut reader = xml::reader::EventReader::from_str(&res);
-            let mut buf = Vec::new();
-            loop {
-                match reader.next() {
-                    Ok(XmlEvent::Characters(e)) => buf.push(e),
-                    Err(_) => break,
-                    _ => (),
-                }
-            }
-            let res = buf.join("");
-
-            // Convert the xml data to json
-            let res = res.replace("window.google.ac.h(", "");
-            let res = res.replace(")", "");
-            let res = res.replace(",,", ",\"\",");
-            let res = res.replace(",,", ",\"\",");
-            let res = res.replace(",,", ",\"\",");
-            let res = res.replace(",,", ",\"\",");
-
-        }*/
 
         // Getting the json data
         let json: serde_json::Value = serde_json::from_str(&res).unwrap();

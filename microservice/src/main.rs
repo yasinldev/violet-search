@@ -109,7 +109,7 @@ async fn handle_connection(stream: TokioTcpStream) {
                             if &call_json.use_proxy == "true" {
                                 println!(
                                     "{}",
-                                    "INFO:    Violet Search is using a proxy".bright_blue()
+                                    "INFO:    Violet Search is using Violet Proxy".bright_blue()
                                 );
                                 
                                 // creating a client

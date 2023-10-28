@@ -56,7 +56,7 @@
                     <i class="bi bi-newspaper"></i> &nbsp; News
                 </div>
                 <div class="search-buttons suspend-text font-assistant" style="color: #9f9fff; cursor: unset;">
-                    <i class="bi bi-bounding-box-circles"></i> &nbsp; Results from {{ $_ENV['DEFAULT_SEARCH_ENGINE'] }}
+                    <i class="bi bi-bounding-box-circles"></i> &nbsp; Results from {{ $_ENV['DEFAULT_SEARCH_ENGINE'] }} (Redirected to Violet Results)
                 </div>
             </div>
            <div class="results">
@@ -81,6 +81,9 @@
                        </div>
                    </div>
                    <div class="column-sm-12 column-xs-12 column-md-4 column-lg-4">
+                       <div class="suspend-text font-assistant alert-warning">
+                           <i class="bi bi-exclamation-triangle"></i> &nbsp; <b>Warning:</b> The Search Engine({{ $_ENV['DEFAULT_SEARCH_ENGINE'] }}) is not working properly. Results redirected to Violet Results.
+                       </div>
                        <div id="wikipedia_data"></div>
                        <div id="wiki_titles"></div>
                    </div>

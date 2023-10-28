@@ -1,0 +1,3 @@
+cargo:rerun-if-changed=build/main.rs
+cargo:rustc-env=TYPENUM_BUILD_CONSTS=/Users/ozkay/Desktop/violet-search/microservice/target/debug/build/typenum-e1f437a559295e23/out/consts.rs
+cargo:rustc-env=TYPENUM_BUILD_OP=/Users/ozkay/Desktop/violet-search/microservice/target/debug/build/typenum-e1f437a559295e23/out/op.rs
