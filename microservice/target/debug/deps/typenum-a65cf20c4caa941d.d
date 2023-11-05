@@ -1,0 +1,18 @@
+/Users/ozkay/Desktop/violet-search/microservice/target/debug/deps/typenum-a65cf20c4caa941d.rmeta: /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typenum-1.16.0/src/lib.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typenum-1.16.0/src/bit.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typenum-1.16.0/src/int.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typenum-1.16.0/src/marker_traits.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typenum-1.16.0/src/operator_aliases.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typenum-1.16.0/src/private.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typenum-1.16.0/src/type_operators.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typenum-1.16.0/src/uint.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typenum-1.16.0/src/array.rs /Users/ozkay/Desktop/violet-search/microservice/target/debug/build/typenum-e39716f14cfa1ca6/out/op.rs /Users/ozkay/Desktop/violet-search/microservice/target/debug/build/typenum-e39716f14cfa1ca6/out/consts.rs
+
+/Users/ozkay/Desktop/violet-search/microservice/target/debug/deps/typenum-a65cf20c4caa941d.d: /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typenum-1.16.0/src/lib.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typenum-1.16.0/src/bit.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typenum-1.16.0/src/int.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typenum-1.16.0/src/marker_traits.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typenum-1.16.0/src/operator_aliases.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typenum-1.16.0/src/private.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typenum-1.16.0/src/type_operators.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typenum-1.16.0/src/uint.rs /Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typenum-1.16.0/src/array.rs /Users/ozkay/Desktop/violet-search/microservice/target/debug/build/typenum-e39716f14cfa1ca6/out/op.rs /Users/ozkay/Desktop/violet-search/microservice/target/debug/build/typenum-e39716f14cfa1ca6/out/consts.rs
+
+/Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typenum-1.16.0/src/lib.rs:
+/Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typenum-1.16.0/src/bit.rs:
+/Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typenum-1.16.0/src/int.rs:
+/Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typenum-1.16.0/src/marker_traits.rs:
+/Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typenum-1.16.0/src/operator_aliases.rs:
+/Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typenum-1.16.0/src/private.rs:
+/Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typenum-1.16.0/src/type_operators.rs:
+/Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typenum-1.16.0/src/uint.rs:
+/Users/ozkay/.cargo/registry/src/index.crates.io-6f17d22bba15001f/typenum-1.16.0/src/array.rs:
+/Users/ozkay/Desktop/violet-search/microservice/target/debug/build/typenum-e39716f14cfa1ca6/out/op.rs:
+/Users/ozkay/Desktop/violet-search/microservice/target/debug/build/typenum-e39716f14cfa1ca6/out/consts.rs:
+
+# env-dep:TYPENUM_BUILD_CONSTS=/Users/ozkay/Desktop/violet-search/microservice/target/debug/build/typenum-e39716f14cfa1ca6/out/consts.rs
+# env-dep:TYPENUM_BUILD_OP=/Users/ozkay/Desktop/violet-search/microservice/target/debug/build/typenum-e39716f14cfa1ca6/out/op.rs

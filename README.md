@@ -47,21 +47,21 @@ Violet uses a proxy server to rotate the IP address of the microservice. This me
 Violet is a search engine that respects your privacy and allows you to customize your search experience. Violet is responsive, fast, and easy to use. It is also open source and free to use.
 ### How does Violet work?
 
-Violet is using a scraper to crawl the web and index the pages. The search engine is responsible for serving the search results to the user. The scraper is written in Rust and the search engine is written in PHP using the Laravel framework.
+Violet is a search engine. It works by crawling the web and indexing the pages. When you search for something, Violet will return the most relevant results based on your query. Violet also allows you to customize your search experience by choosing from a variety of search engines, including Bing, DuckDuckGo, Google, Own Results and more.
 
 ### Should I use Violet Search?
 
 If you are looking for a search engine that respects your privacy and allows you to customize your search experience, then yes, you should use Violet Search.
 
-### Why should I use Violet Search instead of Searx?
+### Is Violet Search free? How does Violet Search make money?
 
-There are several reasons why you might consider using Violet Search instead of Searx:
-* <b>Strong and Reliable Infrastructure:</b> Violet Search is developed using robust programming languages like Rust and PHP. Rust, in particular, offers advantages in terms of memory safety and performance, which can lead to a more stable and faster experience.
-* <b>Greater Customization Options:</b> Violet Search allows users to customize their search experience to a greater extent. This means you can configure the search engine according to your preferences. These customization options enable users to personalize search results, filters, and other features.
-* <b>Privacy and Security Focus:</b> Violet Search prioritizes user privacy and data security. <b>Like Searx,</b> it commits to not tracking or storing user data.
-* <b>Language Support:</b> Violet Search supports multiple languages, including English, French, German, Spanish, Italian, Portuguese, Greek, Chinese, Japanese, Korean, Turkish, and Azerbaijani.
-* <b>Own Results:</b> Violet Search allows users to choose between meta search results or their own results. Meta search results are provided by Google, Brave, DuckDuckGo, and other search engines. Your own results are provided by Violet's own crawler.
+Violet Search is completely free to use. We do not make any money from Violet Search. We do not track you, so we cannot show you ads. We do not have any investors. We do not have any sponsors. We do not have any ads. Violet Search is completely free to use.
 
+So how does Violet Search make money? basically, we don't. We are a non-profit organization that is funded by donations. If you would like to support us, please consider donating to our cause.
+
+### Violet Search better than Google?
+
+No, Violet Search is not better than Google. Because Violet Search is a meta search engine (for now), it does not have its own index. Instead, it uses the indexes of other search engines, such as Google, Bing, DuckDuckGo, and more. This means that Violet Search will return the same results as these search engines.
 
 ## Supported Languages and Search Engines
 
