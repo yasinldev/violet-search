@@ -91,7 +91,7 @@
                                 scrap_artado_suggestions(data)
                             }
                             else {
-                                console.log("no one ")
+                                console.alert("Warning: Search Engine is not working properly. Results redirected to Violet Results.")
                             }
                         };
 
@@ -104,6 +104,7 @@
                         }
                     </script>
                     <x-Input-dropdown />
+                    
                 </div>
             </div>
         </form>

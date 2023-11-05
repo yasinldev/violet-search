@@ -21,3 +21,4 @@ tracing = "0.1.37"
 tracing-subscriber = { version = "0.3.16", features = ["env-filter", "json"]}
 tower-http = { version = "0.3.4", features = ["trace"] }
 tower = { version = "0.4", features = ["make"] }
+select = "0.6.0"

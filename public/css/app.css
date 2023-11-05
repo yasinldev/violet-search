@@ -560,6 +560,23 @@
     line-height: 20px;
 }
 
+pre {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #f36d33;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}
+
 .alert-warning {
     background-color: #ffe6b3;
     padding: 10px;
@@ -570,6 +587,16 @@
     color: #5c5c5c
 }
 
+.alert-info {
+    background-color: #bedfff;
+    border: 1px solid #6ab5ff;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    line-height: 20px;
+    color: #5c5c5c
+}
 /*
     Settings Page
 */

@@ -4,10 +4,12 @@ use serde::{Deserialize, Serialize};
 use colored::*;
 use futures_util::SinkExt;
 use tokio_tungstenite::{accept_async, tungstenite};
+use serde_json::json;
 use futures_util::stream::StreamExt;
 use crate::engines::dropdowns::dropdowns::Dropdowns;
-use crate::engines::client::client::Client;
 use crate::exceptions::exceptions::{throw_violet_search_exception, VioletSearchExceptions};
+use crate::engines::client::client::Client;
+use crate::engines::duckduckgo::duckduckgo::DuckDuckGo;
 
 pub mod helpers;
 pub mod exceptions;
@@ -97,7 +99,7 @@ async fn handle_connection(stream: TokioTcpStream) {
                         &call_json.get_param("search_engine").bright_blue()
                     );
 
-                    match call_json.search_type.as_str().clone() {
+                    match call_json.search_type.as_str() {
                         "dropdown" => {
                             let dropdown_result = call_json.get_dropdown_data(query.as_str()).await;
 
@@ -109,9 +111,9 @@ async fn handle_connection(stream: TokioTcpStream) {
                             if &call_json.use_proxy == "true" {
                                 println!(
                                     "{}",
-                                    "INFO:    Violet Search is using Violet Proxy".bright_blue()
+                                    "INFO_2:    Violet Search is using Violet Proxy".bright_blue()
                                 );
-                                
+
                                 // creating a client
                                 let res = Client::connect_violet_proxy(
                                     call_json.user_agent.clone(),
@@ -119,6 +121,28 @@ async fn handle_connection(stream: TokioTcpStream) {
                                     "8080".to_string()
                                 ).await;
                                 println!("{}", res);
+                            } else {
+                                println!(
+                                    "{}",
+                                    "INFO_2:    Violet Search is not using Violet Proxy".bright_blue()
+                                );
+
+                                let var = DuckDuckGo::scrap_duckduckgo(query, call_json.user_agent.clone()).await.unwrap();
+
+                                // converting to json
+                                let json_title = serde_json::to_string(&var.title_result).unwrap();
+                                let json_desc = serde_json::to_string(&var.desc_result).unwrap();
+                                let json_img = serde_json::to_string(&var.img_result).unwrap();
+                                let json_url = serde_json::to_string(&var.url_result).unwrap();
+
+                                let combined_json = json!({
+                                    "title": json_title,
+                                    "desc": json_desc,
+                                    "img": json_img,
+                                    "url": json_url
+                                });
+
+                                write.send(tungstenite::Message::Text(combined_json.to_string())).await.unwrap();
                             }
                         }
                         _ => throw_violet_search_exception(
