@@ -96,12 +96,11 @@ If you would like to add support for another language, please open an issue on G
 Or you can add it yourself by editing the `resources/lang` directory.
 <br>
 You can find more information about how to do this in the [Violet Language Documantation](LANGUAGE.md).
+
 ### Search Engines
 
 - Google
 - DuckDuckGo
-- DuckDuckGo (Tor)
-- Tourch (Tor)
 - Artado
 - Qwant
 - Yahoo
@@ -110,6 +109,14 @@ You can find more information about how to do this in the [Violet Language Docum
 - Ecosia
 - Ask
 - Brave
+- Violet Results (In Development)
+
+### Tor Search Engines
+
+- DuckDuckGo
+- Ahmia
+- Torch
+- Not Evil
 - Violet Results (In Development)
 
 ## Setup and Setting Up Microservice
