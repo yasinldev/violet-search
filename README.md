@@ -45,7 +45,7 @@ Violet uses a proxy server to rotate the IP address of the microservice. This me
 
 Violet allows you to search the Tor network. This means that you can search for websites that are only accessible through Tor. Violet uses the Tor frameworks to connect to the Tor network. This allows Violet to search the Tor network without having to install the Tor Browser Bundle.
 
-If you clicked any Tor URL in the search results, Violet will open modal and open the URL in modal window.
+If you clicked any Tor URL in the search results, Violet will open modal and ask you if you want to open the URL in the Tor Browser Bundle. If you click yes, Violet will open the Tor Browser Bundle and load the URL. If you click no, Violet will open the URL in modal window.
 
 > *Warning 1* : This feature can be dangerous. If you click on a malicious Tor URL, you could be exposed to malware or other harmful content. Please use this feature at your own risk.
 
@@ -96,12 +96,11 @@ If you would like to add support for another language, please open an issue on G
 Or you can add it yourself by editing the `resources/lang` directory.
 <br>
 You can find more information about how to do this in the [Violet Language Documantation](LANGUAGE.md).
+
 ### Search Engines
 
 - Google
 - DuckDuckGo
-- DuckDuckGo (Tor)
-- Torch (Tor)
 - Artado
 - Qwant
 - Yahoo
@@ -110,6 +109,14 @@ You can find more information about how to do this in the [Violet Language Docum
 - Ecosia
 - Ask
 - Brave
+- Violet Results (In Development)
+
+### Tor Search Engines
+
+- DuckDuckGo
+- Ahmia
+- Torch
+- Not Evil
 - Violet Results (In Development)
 
 ## Setup and Setting Up Microservice
