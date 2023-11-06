@@ -22,6 +22,7 @@ Because we believe that privacy is a fundamental human right that should be prot
 - **Strong Language Support**: Violet supports multiple languages, including English, French, German, Spanish, Italian, Portuguese, Greek, Chinese, Japanese, Korean, Turkish, and Azerbaijani.
 - **Fast and Responsive**: Violet is fast and responsive. It is built using Rust and PHP, which are both fast and efficient programming languages. This means that Violet can handle a large number of requests without slowing down or crashing.
 - **Meta Search or Own Results**: Violet allows you to choose between meta search results or your own results. Meta search results are provided by Google, Brave, DuckDuckGo, and other search engines. Your own results are provided by Violet's own crawler
+- **Tor Results**: Violet allows you to search the Tor network. This means that you can search for websites that are only accessible through Tor.
 - **Customizable**: Violet allows you to customize your search experience. You can choose from a variety of search engines, including Google, Bing, DuckDuckGo results. You can also choose to block certain websites from appearing in your search results.
 - **Strong and Reliable Infrastructure**: Violet is developed using robust programming languages like Rust and PHP. Rust, in particular, offers advantages in terms of memory safety and performance, which can lead to a more stable and faster experience.
 - **No Ads**: Violet does not show any ads. We do not track you, so we cannot show you ads. We do not make any money from Violet. We do not sell your data to third parties. We do not have any investors. We do not have any sponsors. We do not have any ads. Violet is completely free to use.
@@ -39,6 +40,16 @@ Violet uses a proxy server to rotate the IP address of the microservice. This me
 
 <img src="resources/image/violet_ip.png"><br><br>
 > Note: This feature is in development and not default enabled. You can enable it in the `.env` file.
+
+## Tor Connection
+
+Violet allows you to search the Tor network. This means that you can search for websites that are only accessible through Tor. Violet uses the Tor frameworks to connect to the Tor network. This allows Violet to search the Tor network without having to install the Tor Browser Bundle.
+
+If you clicked any Tor URL in the search results, Violet will open modal and ask you if you want to open the URL in the Tor Browser Bundle. If you click yes, Violet will open the Tor Browser Bundle and load the URL. If you click no, Violet will open the URL in modal window.
+
+> *Warning 1* : This feature can be dangerous. If you click on a malicious Tor URL, you could be exposed to malware or other harmful content. Please use this feature at your own risk.
+
+> *Warning 2* : This feature can be slow. Because Violet has to connect to the Tor network, it can take a while for the search results to load. Please be patient.
 
 ## FAQ (Frequently Asked Questions)
 
@@ -89,6 +100,8 @@ You can find more information about how to do this in the [Violet Language Docum
 
 - Google
 - DuckDuckGo
+- DuckDuckGo (Tor)
+- Tourch (Tor)
 - Artado
 - Qwant
 - Yahoo
