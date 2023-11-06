@@ -101,7 +101,7 @@ You can find more information about how to do this in the [Violet Language Docum
 - Google
 - DuckDuckGo
 - DuckDuckGo (Tor)
-- Tourch (Tor)
+- Torch (Tor)
 - Artado
 - Qwant
 - Yahoo
