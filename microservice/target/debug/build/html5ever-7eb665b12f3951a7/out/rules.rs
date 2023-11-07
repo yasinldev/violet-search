@@ -1,16 +1,8 @@
 use markup5ever :: {
-    expanded_name, local_name, namespace_prefix, namespace_url, ns
-} ;
-use std :: borrow :: ToOwned ;
-
-use crate :: tendril :: SliceExt ;
-use crate :: tokenizer :: states :: {
-    Plaintext, Rawtext, Rcdata, ScriptData
-} ;
-use crate :: tree_builder :: tag_sets :: * ;
-use crate :: tree_builder :: types :: * ;
-
-fn any_not_whitespace (x : & StrTendril) -> bool {
+expanded_name , local_name , namespace_prefix , namespace_url , ns
+} ; use crate :: tokenizer :: states :: {
+Plaintext , Rawtext , Rcdata , ScriptData
+} ; use crate :: tree_builder :: tag_sets :: * ; use crate :: tree_builder :: types :: * ; use std :: borrow :: ToOwned ; use crate :: tendril :: SliceExt ; fn any_not_whitespace (x : & StrTendril) -> bool {
 x . chars () . any (| c | ! c . is_ascii_whitespace ())
 } fn current_node < Handle > (open_elems : & [Handle]) -> & Handle {
 open_elems . last () . expect ("no current element")
