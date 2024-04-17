@@ -1,3 +1,5 @@
+> Important : This project is no longer being developed.
+
 <div align="center">
 <p><img width="150" src="resources/image/violet.png"></p>
 
